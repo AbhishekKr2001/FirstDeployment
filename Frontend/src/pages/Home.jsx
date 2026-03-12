@@ -8,7 +8,11 @@ function Home() {
   const [message, setMessage] = useState("");
 
   const submit = async () => {
-    await axios.post("https://mern-feedback-backend-szf4.onrender.com/api/feedback", { name, message });
+    await axios.post(
+      "https://mern-feedback-backend-szf4.onrender.com/api/feedback",
+      { name, message }
+    );
+
     setName("");
     setMessage("");
   };
@@ -19,11 +23,13 @@ function Home() {
       <h2>Feedback Form</h2>
 
       <input
+        value={name}
         placeholder="Name"
         onChange={(e) => setName(e.target.value)}
       />
 
       <textarea
+        value={message}
         placeholder="Message"
         onChange={(e) => setMessage(e.target.value)}
       />
