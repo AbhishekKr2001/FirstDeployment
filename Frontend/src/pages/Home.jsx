@@ -8,7 +8,7 @@ function Home() {
   const [message, setMessage] = useState("");
 
   const submit = async () => {
-    await axios.post("http://localhost:5000/api/feedback", { name, message });
+    await axios.post("https://mern-feedback-backend-szf4.onrender.com/api/feedback", { name, message });
 
   };
 
