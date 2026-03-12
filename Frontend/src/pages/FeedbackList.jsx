@@ -6,7 +6,7 @@ function FeedbackList(){
   const [feedbacks,setFeedbacks] = useState([]);
 
   const loadFeedback = async ()=>{
-    const res = await axios.get("http://localhost:5000/api/feedback");
+    const res = await axios.get("https://mern-feedback-backend-szf4.onrender.com/api/feedback");
     setFeedbacks(res.data);
   };
 
