@@ -9,7 +9,8 @@ function Home() {
 
   const submit = async () => {
     await axios.post("https://mern-feedback-backend-szf4.onrender.com/api/feedback", { name, message });
-
+    setName("");
+    setMessage("");
   };
 
   return (
